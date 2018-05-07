@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+    <meta charset="utf-8">
+    <title>Computer Graphics Tasks ofr BFU</title>
+</html>
+<head>
+</head>
+<body>
+    <main>
+        <h1>Задачи по Компютърна графика</h1>
+        <a href="index.html">Към основното меню</a>
+        <section>
+            <h2>Задача 01</h2>
+            <article>
+                <h3>Convert RGB to CMYK</h3>
+                <form action="#">
+                    <div>
+                        <label for="r">Enter R value</label>
+                        <input type="number" id="r">
+                    </div>
+                    <div>
+                        <label for="g">Enter G value</label>
+                        <input type="number" id="g">
+                    </div>
+                    <div>
+                        <label for="b">Enter B value</label>
+                        <input type="number" id="b">
+                    </div>
+                    <div>
+                        <input
+                            type="button"
+                            value="Calculate"
+                            onClick="calculateCmyk()">
+                        <label>Result:</label>
+                    </div>
+                </form>
+            
+                <div id="convertRgbToCmykResult"></div>
+            </article>
+            <article>
+                <h3>Convert CMYK to RGB</h3>
+                <form action="#">
+                    <div>
+                        <label for="c">Enter C value</label>
+                        <input type="number" id="c">
+                    </div>
+                    <div>
+                        <label for="m">Enter M value</label>
+                        <input type="number" id="m">
+                    </div>
+                    <div>
+                        <label for="y">Enter Y value</label>
+                        <input type="number" id="y">
+                    </div>
+                    <div>
+                        <label for="k">Enter K value</label>
+                        <input type="number" id="k">
+                    </div>
+                    <div>
+                        <input
+                            type="button"
+                            value="Calculate"
+                            onClick="calculateRgb()">
+                        <label>Result:</label>
+                    </div>
+                </form>
+            
+                <div id="convertCmykToRgbResult"></div>
+            </article>
+        </section>
+    </main>
+    <script src="lecture01.js"></script>
+</body>
