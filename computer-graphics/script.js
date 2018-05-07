@@ -12,9 +12,9 @@ function calculateCmyk() {
     const M = calculateValue(G, K);
     const Y = calculateValue(B, K);
 
-    const result = 'CMYK -> ' + prettify(C) + '/ ' + prettify(M) + '/ ' + prettify(Y) + '/ ' + prettify(K);
+    const resultCmyk = 'CMYK -> ' + prettify(C) + '/ ' + prettify(M) + '/ ' + prettify(Y) + '/ ' + prettify(K);
 
-    document.getElementById('convertRgbToCmykResult').innerHTML = result;
+    document.getElementById('convertRgbToCmykResult').innerHTML = resultCmyk;
 }
 
 function normalizeValue(originalValue) {
@@ -40,4 +40,8 @@ function calculateRgb() {
     const R = 255 * (1 - cValue) * multiplier;
     const G = 255 * (1 - mValue) * multiplier;
     const B = 255 * (1 - yValue) * multiplier;
+
+    const resultRgb = 'RGB -> ' + prettify(R) + '/ ' + prettify(G) + '/ ' + prettify(B);
+
+    document.getElementById('convertCmykToRgbResult').innerHTML = resultRgb;
 }
