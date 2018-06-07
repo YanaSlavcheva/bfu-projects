@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+    <meta charset="utf-8">
+    <title>Computer Graphics Tasks ofr BFU - Lecture 02</title>
+</html>
+<head>
+</head>
+<body>
+    <main>
+        <h1>Задачи по Компютърна графика - Тема 02</h1>
+        <a href="index.html">Към основното меню</a>
+        <section>
+            <h2>Задача 02</h2>
+            <article>
+                <h3>Изчертайте окръжност с алгоритъма на Брезенхам</h3>
+                <p>Полето е с размери 20 на 20 пиксела</p>
+                <form action="#">
+                    <div>
+                        <label for="x">Enter x</label>
+                        <input type="number" id="x">
+                    </div>
+                    <div>
+                        <label for="y">Enter y</label>
+                        <input type="number" id="y">
+                    </div>
+                    <div>
+                        <label for="r">Enter r</label>
+                        <input type="number" id="r">
+                    </div>
+                    <div>
+                        <input
+                            type="button"
+                            value="Draw Line"
+                            onClick="drawCircleClicked()">
+                    </div>
+                </form>
+            </article>
+            <canvas id="myCanvas" width="200" height="200" style="border:1px solid #d3d3d3; width: 800px; height: 600px">
+                Your browser does not support the HTML5 canvas tag.</canvas>
+        </section>
+    </main>
+    <script src="lecture02-circle.js"></script>
+</body>
