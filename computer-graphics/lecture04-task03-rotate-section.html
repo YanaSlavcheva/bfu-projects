@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+    <meta charset="utf-8">
+    <title>Computer Graphics Tasks ofr BFU - Lecture 04</title>
+</html>
+<head>
+</head>
+<body>
+    <main>
+        <h1>Задачи по Компютърна графика - Тема 04</h1>
+        <a href="index.html">Към основното меню</a>
+        <section>
+            <h2>Задача 03</h2>
+            <article>
+                <h3>Ротация на отсечка</h3>
+                <p>Въведете X между 0 и 20; Y между 0 и 20; X > Y; ъгъл Alpha от 0 до 360</p>
+                <form action="#">
+                    <div>
+                        <label for="x0">Enter x0</label>
+                        <input type="number" id="x0">
+                    </div>
+                    <div>
+                        <label for="y0">Enter y0</label>
+                        <input type="number" id="y0">
+                    </div>
+                    <div>
+                        <label for="x1">Enter x1</label>
+                        <input type="number" id="x1">
+                    </div>
+                    <div>
+                        <label for="y1">Enter y1</label>
+                        <input type="number" id="y1">
+                    </div>
+                    <div>
+                        <label for="alpha">Enter Alpha</label>
+                        <input type="number" id="alpha">
+                    </div>
+                    <div>
+                        <input
+                            type="button"
+                            value="Rotate section"
+                            onClick="rotateSectionClicked()">
+                    </div>
+                </form>
+            </article>
+            <canvas id="myCanvas" width="2000" height="2000" style="border:1px solid #d3d3d3; width: 800px; height: 600px">
+                Your browser does not support the HTML5 canvas tag.</canvas>
+        </section>
+    </main>
+    <script src="lecture04-task03-rotate-section.js"></script>
+</body>
