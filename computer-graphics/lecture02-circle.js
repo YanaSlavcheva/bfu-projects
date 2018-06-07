@@ -1,7 +1,11 @@
 function drawCircleClicked() {
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
-    ctx.clearRect(0, 0, 200, 200);
+    const canvasWidth = 200;
+    const canvasHeight = 200;
+
+    ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+    drawMesh();
 
     const canvasScaleFactor = 10;
 
@@ -42,5 +46,22 @@ function drawCircleClicked() {
         drawPixel (y * (-1) + xCenter, x + yCenter);
         drawPixel (y + xCenter, x * (-1) + yCenter);
         drawPixel (y * (-1) + xCenter, x * (-1) + yCenter);
+    }
+
+    function drawMesh() {
+        for (let x = 0; x < canvasWidth; x += 10){
+            drawLine(x, 0, x, canvasHeight);
+        }
+
+        for (let y = 0; y < canvasHeight; y += 10) {
+            drawLine(0, y, canvasWidth, y);
+        }
+    }
+
+    function drawLine(xStart, yStart, xEnd, yEnd) {
+        ctx.beginPath();
+        ctx.moveTo(xStart, yStart);
+        ctx.lineTo(xEnd, yEnd);
+        ctx.stroke();
     }
 }

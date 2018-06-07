@@ -1,7 +1,11 @@
 function drawLineClicked() {
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
-    ctx.clearRect(0, 0, 200, 150);
+    
+    const canvasWidth = 200;
+    const canvasHeight = 150;
+    ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+    drawMesh();
 
     const canvasScaleFactor = 10;
 
@@ -10,7 +14,7 @@ function drawLineClicked() {
     const y0 = parseInt(document.getElementById('y0').value);
     const y1 = parseInt(document.getElementById('y1').value);
 
-    drawLine(x0, x1, y0, y1);
+    drawBrezenheimLine(x0, x1, y0, y1);
 
     // the canvas is scaled -> 1 pixel is actually rectangle 10 x 10 pixels
     function drawPixel(ctx, xCoordinate, yCoordinate, canvasScaleFactor) {
@@ -18,7 +22,7 @@ function drawLineClicked() {
     }
 
     // works only for x > y
-    function drawLine(x0, x1, y0, y1) {
+    function drawBrezenheimLine(x0, x1, y0, y1) {
         let deltaX = x1 - x0;
         let deltaY = y1 - y0;
         let error = 0;
@@ -32,5 +36,22 @@ function drawLineClicked() {
                 error = error - 1;
             }
         }
+    }
+
+    function drawMesh() {
+        for (let x = 0; x < canvasWidth; x += 10){
+            drawLine(x, 0, x, canvasHeight);
+        }
+
+        for (let y = 0; y < canvasHeight; y += 10) {
+            drawLine(0, y, canvasWidth, y);
+        }
+    }
+
+    function drawLine(xStart, yStart, xEnd, yEnd) {
+        ctx.beginPath();
+        ctx.moveTo(xStart, yStart);
+        ctx.lineTo(xEnd, yEnd);
+        ctx.stroke();
     }
 }
