@@ -4,26 +4,13 @@ function drawLineClicked() {
     ctx.clearRect(0, 0, 200, 150);
 
     const canvasScaleFactor = 10;
-    const canvasWidth = 20;
-    const canvasHeight = 15;
-
 
     const x0 = parseInt(document.getElementById('x0').value);
     const x1 = parseInt(document.getElementById('x1').value);
     const y0 = parseInt(document.getElementById('y0').value);
     const y1 = parseInt(document.getElementById('y1').value);
 
-    const y0Reversed = canvasHeight - y0;
-    const y1Reversed = canvasHeight - y1;
-
     drawLine(x0, x1, y0, y1);
-
-    // drawPixel(ctx, 0, 0, canvasScaleFactor);
-    // ctx.fillRect(10, 10, 10, 10);
-    // ctx.moveTo(0, 0);
-    // ctx.lineTo(1, 1);
-    // ctx.stroke();
-
 
     // the canvas is scaled -> 1 pixel is actually rectangle 10 x 10 pixels
     function drawPixel(ctx, xCoordinate, yCoordinate, canvasScaleFactor) {
