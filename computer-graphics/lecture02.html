@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <meta charset="utf-8">
+    <title>Computer Graphics Tasks ofr BFU - Lecture 02</title>
+</html>
+<head>
+</head>
+<body>
+    <main>
+        <h1>Задачи по Компютърна графика - Тема 02</h1>
+        <a href="index.html">Към основното меню</a>
+        <section>
+            <h2>Задача 01</h2>
+            <article>
+                <h3>Изчертайте линия с алгоритъма на Брезенхам</h3>
+                <p>Въведете X между 0 и 20; Y между 0 и 15; X > Y</p>
+                <form action="#">
+                    <div>
+                        <label for="x0">Enter x0</label>
+                        <input type="number" id="x0">
+                    </div>
+                    <div>
+                        <label for="y0">Enter y0</label>
+                        <input type="number" id="y0">
+                    </div>
+                    <div>
+                        <label for="x1">Enter x1</label>
+                        <input type="number" id="x1">
+                    </div>
+                    <div>
+                        <label for="y1">Enter y1</label>
+                        <input type="number" id="y1">
+                    </div>
+                    <div>
+                        <input
+                            type="button"
+                            value="Draw Line"
+                            onClick="drawLineClicked()">
+                    </div>
+                </form>
+            </article>
+            <canvas id="myCanvas" width="200" height="150" style="border:1px solid #d3d3d3; width: 800px; height: 600px">
+                Your browser does not support the HTML5 canvas tag.</canvas>
+        </section>
+    </main>
+    <script src="lecture02.js"></script>
+</body>
