@@ -2,8 +2,6 @@ function scaleSectionClicked() {
     const c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
 
-    const canvasWidth = 2000;
-    const canvasHeight = 2000;
     //ctx.clearRect(0, 0, canvasWidth, canvasHeight);
     const input = document.getElementById('input');
     input.addEventListener('change', handleFiles);
